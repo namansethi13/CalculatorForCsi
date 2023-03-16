@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator</title>
+    <link href="./styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="unitconvertor">
+        <span class="close">&times;</span>
+        <select name="Conversion-type" id="Conversion-type" class="form-select">
+            <option value="Length">Select an option</option>
+            <option value="Length">Length</option>
+            <option value="Data">Data</option>
+            <option value="Time">Time</option>
+          </select>
+          <br>
+          <div class="to-from">
+              <select name="Conversion-from" id="Conversion-from" class="form-select-sm">
+                </select>
+                <select name="Conversion-to" id="Conversion-to" class="form-select-sm">
+                </select>
+            </div>
+
+            <div class="input-output">
+                <input type="text" class="input" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                <input type="text" class="output-box" disabled>
+            </div>
+    </div>
+    <div class="calculator-grid">
+        
+        <div class="output">
+            <svg class="historybtn" height="21px" version="1.1" viewBox="0 0 20 21" width="20px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" 
+            xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#ffffff"
+                 id="Core" opacity="0.9" transform="translate(-464.000000, -254.000000)"><g id="history" transform="translate(464.000000, 254.500000)"><path d="M10.5,0 C7,0 3.9,1.9 2.3,4.8 L0,2.5 L0,9 L6.5,9 L3.7,6.2 C5,3.7 7.5,2 10.5,2 C14.6,2 18,5.4 18,9.5 C18,13.6 14.6,17 10.5,17 C7.2,17 4.5,14.9 3.4,12 L1.3,12 C2.4,16 6.1,19 10.5,19 C15.8,19 20,14.7 20,9.5 C20,4.3 15.7,0 10.5,0 L10.5,0 Z M9,5 L9,10.1 L13.7,12.9 L14.5,11.6 L10.5,9.2 L10.5,5 L9,5 L9,5 Z" id="Shape"/>
+            </g></g></g></svg>
+            <div class="history">no history available</div>
+            <div class="operations" id="operations"></div>
+            <div class="answers" id="answers"></div>
+        </div>
+        <button class="more"><div style="width: 70%;">
+            <?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><title>1</title><g id="Layer_64" data-name="Layer 64"><path d="M60,18.24H45.76V4a2,2,0,0,0-2-2H4A2,2,0,0,0,2,4V43.76a2,2,0,0,0,2,2H18.24V60a2,2,0,0,0,2,2H60a2,2,0,0,0,2-2V20.24A2,2,0,0,0,60,18.24ZM6,6H41.76V41.76H6ZM58,58H22.24V45.76H43.76a2,2,0,0,0,2-2V22.24H58Z"/></g></svg>
+        </div></button>
+        <button class="all-clear">AC</button>
+        <button class="delete">DEL</button>
+        <button class="number">/</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="number">*</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="number">+</button>
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="number">-</button>
+        <button class="number">.</button>
+        <button class="number">0</button>
+        <button class="equals-to span-two">=</button>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

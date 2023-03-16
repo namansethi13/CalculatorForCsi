@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Play', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-size: 100% 100%;
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    background-image: radial-gradient(49% 81% at 45% 47%, #FFE20345 0%, #073AFF00 100%),
+        radial-gradient(113% 91% at 17% -2%, #FF5A00FF 1%, #FF000000 99%),
+        radial-gradient(142% 91% at 83% 7%, #FFDB00FF 1%, #FF000000 99%),
+        radial-gradient(142% 91% at -6% 74%, #FF0049FF 1%, #FF000000 99%),
+        radial-gradient(142% 91% at 111% 84%, #FF7000FF 0%, #FF0000FF 100%);
+
+}
+
+.calculator-grid {
+    border: 2px solid black;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+}
+
+.calculator-grid>button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculator-grid>button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .answers {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.output .operations {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.history{
+    background-color: white;
+    color: black;
+    position: absolute;
+    left: 10%;
+    padding: 2%;
+    border-radius: 10%;
+}
+
+.unitconvertor{
+    position: absolute;
+    left: 25%;
+    top: 20%;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.close {
+    cursor: pointer;
+    position: relative;
+    left: 95%;
+    font-size: 45px;
+    font-weight: 600;
+  }
+
+
+.to-from{
+    display: flex;
+    justify-content: space-around;
+}
+.input-output{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+}
